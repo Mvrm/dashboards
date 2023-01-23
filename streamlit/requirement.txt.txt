@@ -1,0 +1,7 @@
+Python=3.9.7
+Streamlit=1.11.0
+
+To run the application (without default port): 
+
+	- streamlit run streamlit_stock.py --server.port 8080
+	

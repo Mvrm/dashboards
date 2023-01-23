@@ -7,10 +7,6 @@ Created on Sun Jan 22 10:59:18 2023
 import streamlit as st
 import plotly.express as px
 
-import plotly.graph_objects as go
-
-from millify import prettify
-
 import pandas as pd
 import numpy as np
 
