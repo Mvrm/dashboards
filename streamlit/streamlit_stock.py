@@ -10,9 +10,7 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 
-
 st.write("# Stock Prices dashboard")
-
 st.write("### Apple Stock  Prices dashboard")
 
 st.markdown(
@@ -21,11 +19,8 @@ st.markdown(
             Data source: [Kaggle](https://www.kaggle.com/datasets/paultimothymooney/stock-market-data)
             """
 )
-
-
+    
 aapl = pd.read_csv("C:/Users/manishv/Desktop/dashboards/streamlit/AAPL.csv")
-
-
 aapl["Date"] = pd.to_datetime(aapl["Date"], format="%d-%m-%Y")
 
 aapl["year"] = aapl["Date"].dt.year
@@ -53,7 +48,7 @@ submitted = st.button("Submit")
 if submitted:
     filtered_year = aapl[aapl["year"] == selected_year]
     line_fig = px.line(
-        filtered_year[['Date', 'High']],
+        filtered_year[["Date", "High"]],
         x="Date",
         y="High",
         # color='type',
@@ -64,5 +59,5 @@ if submitted:
 with st.sidebar:
     st.subheader("About")
     st.markdown("This dashboard is made by Manish, using **Streamlit**")
-    
-st.sidebar.image('https://streamlit.io/images/brand/streamlit-mark-color.png', width=30)
+
+st.sidebar.image("https://streamlit.io/images/brand/streamlit-mark-color.png", width=30)
